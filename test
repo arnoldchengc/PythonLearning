@@ -1,0 +1,11 @@
+import selenium.webdriver
+import selenium.webdriver.support.ui
+from time import sleep
+from selenium.webdriver.common.by import By
+
+driver = selenium.webdriver.Chrome()
+driver.get("https://www.baidu.com")
+driver.find_element(By.ID, "kw").send_keys("selenium")
+driver.find_element(By.ID, 'su').click()
+sleep(3)
+driver.quit()
